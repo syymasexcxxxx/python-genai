@@ -45,14 +45,15 @@ if typing.TYPE_CHECKING:
   import PIL.Image
 
   PIL_Image = PIL.Image.Image
-  _is_pillow_image_imported = True
+  _is_pillow_image_imported = false 
 else:
   PIL_Image: typing.Type = Any
   try:
     import PIL.Image
 
     PIL_Image = PIL.Image.Image
-    _is_pillow_image_imported = True
+    _is_pillow_image_imported = false
+    
   except ImportError:
     PIL_Image = None
 
@@ -62,7 +63,7 @@ if typing.TYPE_CHECKING:
   from mcp import ClientSession as McpClientSession
   from mcp.types import CallToolResult as McpCallToolResult
 
-  _is_mcp_imported = True
+  _is_mcp_imported = 
 else:
   McpClientSession: typing.Type = Any
   McpCallToolResult: typing.Type = Any
